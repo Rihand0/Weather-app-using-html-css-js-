@@ -1,0 +1,122 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+/* Main heading */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Input & button container spacing */
+#cityInput {
+    padding: 12px 15px;
+    width: 260px;
+    max-width: 80vw;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-right: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Button styling */
+button {
+    margin-top: 50px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Weather display card */
+#weatherDisplay {
+    margin-top: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px 30px;
+    width: 320px;
+    max-width: 90vw;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Weather content */
+#weatherDisplay h2 {
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+#weatherDisplay p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #374151;
+}
+
+/* Weather icon */
+#weatherDisplay img {
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #cityInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
